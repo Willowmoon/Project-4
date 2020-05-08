@@ -15,14 +15,15 @@
 ### MVP/PostMVP
 #### MVP:
 - Get user name and display in header.
-- Query options and custom tailor questions.
 - Save voice recording of answer with question specific name.
+- Allow users to go back and forward between questions.
+- Make program incredibly accessible for older target audience.
 
 #### PostMVP:
 - Auto download answer after each question if button checked.
 - Integrate Facebook chat or gmail to save recordings by sending to self.
 - Login through Google or Facebook to save question currently on.
-- Make program incredibly accessible for older target audience
+- Query options and custom tailor questions.
 - Custom question option.
 
 ## Components:
@@ -51,6 +52,16 @@
 | Theme Selection | L | 3hrs | hrs |
 | Facebook or Google login | L | 10hrs | hrs |
 | Total | - | 64hrs | hrs |
+
+## Model
+```
+[
+    {
+        "prompt": "Deep question about life 1",
+        "option": "general/filter options"
+    }
+]
+```
 
 ## Additional Libraries:
 - [https://github.com/danrouse/react-audio-recorder] - Audo Recorder Package
