@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
 
 :root {
-  --primaryColor: #3fd0d4;
+  --primaryColor: #32a1a5;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
@@ -11,6 +11,9 @@
   --mainSpacing: 4px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+::-webkit-input-placeholder {
+    color: var(--offWhite);
 }
 
 * {
@@ -22,7 +25,7 @@
 body {
   font-family: "Lato", sans-serif;
   color: var(--mainBlack);
-  background: var(--mainWhite);
+  background: var(--offWhite);
   line-height: 1.4;
   font-size: 1rem;
 }
@@ -35,14 +38,15 @@ h6 {
   font-family: "Poppins", sans-serif;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
+  font-size: 3vw;
 }
 p {
   margin-bottom: 1.25rem;
 }
 a {
   text-decoration: none;
+  color: var(--mainBlack);
 }
-.btn-white,
 .btn-primary {
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
@@ -52,13 +56,15 @@ a {
   display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;
-  width: 50vw;
-  font-size: 2em;
   border-radius: 35px;
+  width: 20vw;
+  text-align: center;
+  margin: 0.8vw;
+  font-size: 1.3vw;
 }
-.btn-white:hover {
-  background: var(--mainWhite);
-  color: var(--primaryColor);
+.recorder {
+  width: 42vw;
+  font-size: 2vw;
 }
 .btn-primary {
   background: var(--primaryColor);
@@ -70,7 +76,28 @@ a {
   color: var(--primaryColor);
 }
 main {
-  min-height: 100vh;
+  min-height: 82vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.promptBox {
+  width: 50vw;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .promptBox {
+    width: 70vw;
+  }
+  .btn-primary {
+    font-size: 2.5vw;
+    width: 32vw;
+  }
+  .recorder{
+    width: 66vw;
+    font-size: 3.3vw;
+  }
+  h1 {
+    font-size: 5vw;
+  }
 }

@@ -4,57 +4,94 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Layout from "../components/layout"
 import { ReactMediaRecorder } from "react-media-recorder"
 import SEO from "../components/seo"
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaCaretRight,
+  FaEllipsisV,
+  FaTerminal,
+} from "react-icons/fa"
 const promptTemplate = ({ data }) => {
-  const { prompt,slug } = data.prompt
-  console.log(data)
+  const { prompt, slug } = data.prompt
+
   return (
     <Layout>
       <SEO title={slug} />
-      <h1>{prompt}</h1>
-      {Number(slug) < 2 ? (
-        ""
-      ) : (
-        <AniLink paintDrip hex="#3fd0d4" to={`/prompts/${Number(slug) - 1}`}>
-          <FaChevronLeft />
-          Previous Question
-        </AniLink>
-      )}
+      <br />
+      <br />
+      <div className="promptBox">
+        <h1>{prompt}</h1>
 
-      <ReactMediaRecorder
-        audio
-        render={({ status, startRecording, stopRecording, mediaBlobUrl }) => (
-          <>
-            <br />
-            <p>{status}</p>
-            <div>
-              {status === "recording" ? (
-                <p>press stop when you are complete</p>
+        <ReactMediaRecorder
+          audio
+          render={({ status, startRecording, stopRecording, mediaBlobUrl }) => (
+            <>
+              <br />
+
+              {status !== "recording" ? (
+                <button
+                  className="btn-primary recorder"
+                  onClick={startRecording}
+                >
+                  Start Recording
+                </button>
               ) : (
-                <p>press the button to start recording</p>
+                <button
+                  className="btn-primary recorder"
+                  onClick={stopRecording}
+                >
+                  Stop Recording
+                </button>
               )}
-            </div>
-            {status !== "recording" ? (
-              <button className="btn-primary" onClick={startRecording}>
-                Start Recording
-              </button>
-            ) : (
-              <button className="btn-primary" onClick={stopRecording}>
-                Stop Recording
-              </button>
-            )}
-            <br />
-            <br />
-            <br />
-            <audio src={mediaBlobUrl} controls />
-          </>
-        )}
-      />
+              <br />
+              <br />
 
-      <AniLink paintDrip hex="#3fd0d4" to={`/prompts/${Number(slug) + 1}`}>
-        Next Question
-        <FaChevronRight />
-      </AniLink>
+              <audio
+                src={mediaBlobUrl}
+                controls
+                className="recorder"
+                style={{
+                  border: "5px solid #32a1a5",
+                  padding: "1px",
+                  borderRadius: "35px",
+                  backgroundColor: "#32a1a5",
+                }}
+              />
+              <br />
+              <br />
+            </>
+          )}
+        />
+        <div>
+          {Number(slug) < 2 ? (
+            ""
+          ) : (
+            <AniLink
+              className="btn-primary"
+              paintDrip
+              hex="#32a1a5"
+              to={`/prompts/${Number(slug) - 1}`}
+            >
+              <FaChevronLeft />
+              &nbsp;&nbsp;Prev
+            </AniLink>
+          )}
+          <AniLink
+            className="btn-primary"
+            paintDrip
+            hex="#32a1a5"
+            to={`/prompts/${Number(slug) + 1}`}
+          >
+            Next&nbsp;&nbsp;
+            <FaChevronRight />
+          </AniLink>
+          <br />
+          <br />
+          <p>
+            press <FaCaretRight /> to review and <FaEllipsisV /> to save
+          </p>
+        </div>
+      </div>
     </Layout>
   )
 }
