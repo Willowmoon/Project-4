@@ -1,34 +1,72 @@
 [
   {
     "id": 1,
-    "prompt": "Deep question about life 1"
+    "slug": 1,
+    "prompt": "What was the happiest day of your life?"
   },
   {
     "id": 2,
-    "prompt": "Deep question about life 2"
+    "slug": 2,
+    "prompt": "If there was one day you could do over, what was it and what would you do?"
   },
   {
     "id": 3,
-    "prompt": "Deep question about life 3"
+    "slug": 3,
+    "prompt": "Describe an incredibly difficult time in your life, and how you got through it."
   },
   {
     "id": 4,
-    "prompt": "Deep question about life 4"
+    "slug": 4,
+    "prompt": "If you could give a younger person advice, what would it be?"
   },
   {
     "id": 5,
-    "prompt": "Deep question about life 5"
+    "slug": 5,
+    "prompt": "Whats the lesson that took you the longest to learn?"
   },
   {
     "id": 6,
-    "prompt": "Deep question about life 6"
+    "slug": 6,
+    "prompt": "What historic event can you vividly remember?"
   },
   {
     "id": 7,
-    "prompt": "Deep question about life 7"
+    "slug": 7,
+    "prompt": "Talk about your music taste and how music/your taste has changed?"
   },
   {
     "id": 8,
-    "prompt": "Deep question about life 8"
+    "slug": 8,
+    "prompt": "What's your favorite thing to do?"
+  },
+  {
+    "id": 9,
+    "slug": 9,
+    "prompt": "What was your first job?"
+  },
+  {
+    "id": 10,
+    "slug": 10,
+    "prompt": "What is the biggest thing that has changed since you were a child?"
+  },
+  {
+    "id": 11,
+    "slug": 11,
+    "prompt": "What was the best gift you ever received?"
+  },
+  {
+    "id": 12,
+    "slug": 12,
+    "prompt": "What is your favorite song? First time you heard it?"
+  },
+  {
+    "id": 13,
+    "slug": 13,
+    "prompt": "What's your favorite joke?"
+  },
+  {
+    "id": 14,
+    "slug": 14,
+    "prompt": "Tell your favorite story."
   }
 ]
