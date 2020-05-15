@@ -1,4 +1,4 @@
-![Alt Text](./planning/logo.png "StoryShare")
+# StoryShare
 ## Description:
     After discussing my grandfather one day I realized that the only thing I couldn't remember was his voice. 
     Since then it's been a passion of mine to create an application I wish I would have had. 
