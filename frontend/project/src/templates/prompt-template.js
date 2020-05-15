@@ -76,15 +76,19 @@ const promptTemplate = ({ data }) => {
               &nbsp;&nbsp;Prev
             </AniLink>
           )}
-          <AniLink
-            className="btn-primary"
-            paintDrip
-            hex="#32a1a5"
-            to={`/prompts/${Number(slug) + 1}`}
-          >
-            Next&nbsp;&nbsp;
-            <FaChevronRight />
-          </AniLink>
+          {Number(slug) > 12 ? (
+            ""
+          ) : (
+            <AniLink
+              className="btn-primary"
+              paintDrip
+              hex="#32a1a5"
+              to={`/prompts/${Number(slug) + 1}`}
+            >
+              Next&nbsp;&nbsp;
+              <FaChevronRight />
+            </AniLink>
+          )}
           <br />
           <br />
           <p>

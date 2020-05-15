@@ -16,8 +16,8 @@ const Header = ({ siteTitle }) => (
         padding: `0.8rem 1rem`,
       }}
     >
-      <h1 style={{ margin: 0, fontSize: '20px' }}>
-        <img src="https://i.imgur.com/F1H691a.png" alt="logo" width="20px"/>
+      <h1 style={{ margin: 0, fontSize: "20px" }}>
+        <img src="https://i.imgur.com/F1H691a.png" alt="logo" width="20px" />
         <Link
           to="/"
           style={{
