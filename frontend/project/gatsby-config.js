@@ -3,7 +3,7 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `The Story Of`,
+    title: `Storyline`,
     description: `Accessible website that allows voice recording and saving of clips with the intention to send recordings to family members as keepsakes.`,
     author: `@douglasshmuglas`,
   },
