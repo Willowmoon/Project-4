@@ -18,10 +18,13 @@ const promptTemplate = ({ data }) => {
     <Layout>
       <SEO title={slug} />
       <br />
-      <br />
       <div className="promptBox">
+        <hr />
+        <br />
+        <br />
         <h1>{prompt}</h1>
-
+        <br />
+        <hr />
         <ReactMediaRecorder
           audio
           render={({ status, startRecording, stopRecording, mediaBlobUrl }) => (
